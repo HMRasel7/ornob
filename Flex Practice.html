@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./flex Practice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      .wrapping{
+        max-width: 1270px;
+        background-color: #fafafa;
+        margin: auto;
+      }
+      .menu{
+        background-color: green;
+        text-align: center;
+      }
+      .menu ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      .menu ul li{
+        margin-left: -1px;
+        flex-grow: 1;
+      }
+      .menu ul li a{
+        display: block;
+        padding: 20px 30px;
+        color: #fff;
+        border: 1px solid white;
+        text-decoration: none;
+       
+      }
+      .menu ul li ul{
+        display: flex;
+        flex-direction: column;
+      }
+      .menu ul li ul{
+        visibility: hidden;
+        opacity: 0;
+        width: 150px;
+        position: absolute;
+        top: 100%;
+        left:0;
+        transition: .5s;
+      }
+      .menu ul li:hover ul{
+        visibility: visible;
+        opacity: 1;
+        background-color:red;
+      }
+      .menu ul li :last-child(a){
+        border-left: none;
+        margin-left: 0;
+      }
+      .row1{
+        display: flex;
+        flex: 1;
+        margin-top: 20px;
+      }
+      .item1{
+        border:2px solid red ;
+        margin-right: 5px;
+      }
+      .bigger-2{
+        flex-basis:30%;
+      }
+      .bigger-div{
+        flex-basis:70%;
+      }
+      .row3{
+        display: flex;
+      
+      }
+      .row-content{
+        border:2px solid red ;
+        flex: 1 0 0%;
+        margin-right: 5px;
+      }
+      .row-bigger{
+        flex-grow: 3;
+      }
+    </style>
+      <body>
+        <div class="wrapping">
+          <div class="menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a>
+              <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">about</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+         
+              
+            </ul>
+          </div>
+          <div class="row1">
+
+            <div class="item1 bigger-div ">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae error officia amet consequuntur quae? Quam labore, ullam dolor quia distinctio at numquam nam corporis maxime suscipit, velit reprehenderit. Maiores, omnis.
+            </div>
+            <div class="item1 bigger-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae error officia amet consequuntur quae? Quam labore, ullam dolor quia distinctio at numquam nam corporis maxime suscipit, velit reprehenderit. Maiores, omnis.
+            </div>
+          </div>
+          <div class="row3 mt-5">
+
+            <div class="row-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum recusandae quia, saepe quae laudantium accusantium rem, sint consequatur obcaecati vero quidem. Corrupti itaque rerum fugit quisquam, aut provident voluptatum.
+            </div>
+            
+            <div class="row-content row-bigger">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum recusandae quia, saepe quae laudantium accusantium rem, sint consequatur obcaecati vero quidem. Corrupti itaque rerum fugit quisquam, aut provident voluptatum.
+            </div>
+            
+            <div class="row-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum recusandae quia, saepe quae laudantium accusantium rem, sint consequatur obcaecati vero quidem. Corrupti itaque rerum fugit quisquam, aut provident voluptatum.
+            </div>
+          </div>
+          <div class="service d-flex mt-3">
+
+            
+            <div class="item p-4 shadow border-primary">
+              <span class="d-flex justify-content-center mb-3 text-primary"><i class="fas fa-lightbulb"></i></span>
+               <h3 class="text-center mb-3">Web Design</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi optio debitis ea soluta. Voluptatibus aspernatur officia repellendus tempore dolor!</p>
+            </div>
+           
+            <div class="item p-4 shadow border border-1 mx-2">
+              <h3 class="text-center mb-3">Web Design</h3>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi optio debitis ea soluta. Voluptatibus aspernatur officia repellendus tempore dolor!</p>
+           </div>
+           
+           <div class="item p-4 shadow border border-1 ">
+            <h3 class="text-center mb-3">Web Design</h3>
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi optio debitis ea soluta. Voluptatibus aspernatur officia repellendus tempore dolor!</p>
+         </div>
+          </div>
+        </div>
+      </body>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  </body>
+</html>
